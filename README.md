@@ -1,13 +1,16 @@
-Tugas 3 Konsep Kecerdasan Artifisial D 
+# Tugas Kelompok Konsep Kecerdasan Artifisial D 
 
-Kelompok 1
-Anggota kelompok:
-Samuel Steve Mulyono 5025231197
 
-Case:
-8 puzzle problem 
-Heuristic:
+## Anggota kelompok 1:
+#### Nathanael Valen Susilo 5025231099 
+#### Samuel Steve Mulyono 5025231197
+#### Kevin Andreas 5025231168
+
+## Case: 8 Puzzle problem 
+
+## Fungsi Heuristik:
 Jumlah tile salah atau Manhattan distance (jarak masing masing tile salah menuju ke posisi yang benar)
-Informed Search:
-Greedy
-A Star
+
+## Metode Informed Search :
+- Greedy Best-First Search
+- A Star Search
