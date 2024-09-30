@@ -1,13 +1,12 @@
 import numpy as np
 
-
 class Node:
 
     # Initialize the node with the board config
     def __init__(self, s):
         self.child = s
         self.parent = None
-        self.gn = 0
+        self.gn = 0 
         self.hn = 0
 
     def get_parent(self):
@@ -165,14 +164,14 @@ class Distance:
     def distance(arr, goal, heuristic):
         distance = 0
         if heuristic == 1:  # Misplaced Tiles
-            for i in range(8):
-                if arr[i] != goal[i]:
+            for i in range(len(arr)):
+                if (arr[i] != goal[i]) & (arr[i] != 0):
                     distance += 1
             return distance
         elif heuristic == 2:  # Manhattan Distance
             arr = np.asarray(arr).reshape(3, 3)
             goal = np.asarray(goal).reshape(3, 3)
-            for i in range(1, 9):  # Start from 1 to 8
+            for i in range(1, 9):  # Start from 1 to 8, ignoring 0
                 a, b = np.where(arr == i)
                 x, y = np.where(goal == i)
                 distance += abs((a - x)[0]) + abs((b - y)[0])
